@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kejutan!</title>
+    <style>
+        /* Gaya halaman kejutan, bisa Anda sesuaikan sendiri */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #B0C7BD;
+            background-image: url('GIF.gif'); /* Tambahkan latar belakang GIF di sini */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .surprise-message {
+            background-color: #D6E5E3;
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 50px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px); /* Efek blur latar belakang */
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .back-button, .second-button {
+            background-color: #0B4F6C; 
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none; /* Menghapus garis bawah pada tautan */
+            display: inline-block;
+            width: 150px; /* Lebar tombol */
+        }
+
+        .back-button:hover, .second-button:hover {
+            background-color: #0B4F6C; 
+        }
+
+        @keyframes cakeAnimation {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .cake {
+            width: 300px;
+            height: auto;
+            animation: cakeAnimation 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="surprise-message">
+        <h1>Suprisee!</h1>
+        <p>Ini adalah halaman kejutan khusus untukmu😜, wiw wiw🤣 </p>
+        <p>tapi ga bikin terkejut banget se makk hehe maklum lah jek belajar mak😌</p>
+        <p>BTW DOA O MAK, TAK AMINI. AAMIINN</p>
+        <video class="cake" autoplay loop controls>
+            <source src="gif.mp4" type="video/mp4">
+            Maaf, browser Anda tidak mendukung elemen video.
+        </video>
+        <div class="button-container">
+            <a href="hbd.html" class="back-button">Kembali</a>
+            <a href="lanjut.html" class="second-button">Lanjutttt</a>
+        </div>
+    </div>
+</body>
+</html>

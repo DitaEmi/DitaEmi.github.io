@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kejutan!</title>
+    <style>
+        /* Gaya halaman kejutan, bisa Anda sesuaikan sendiri */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #B0C7BD;
+            background-image: url('GIF.gif'); /* Tambahkan latar belakang GIF di sini */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .surprise-message {
+            background-color: #D6E5E3;
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 50px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px); /* Efek blur latar belakang */
+        }
+
+        .video-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Memungkinkan video untuk meluncur ke bawah jika tidak cukup ruang */
+        }
+
+        .cake, .cake2 {
+            max-width: 100%; /* Lebar video maksimum */
+            height: auto;
+            animation: cakeAnimation 2s infinite;
+            cursor: pointer; /* Tambahkan tanda kursor menunjuk saat mengarahkan ke video */
+        }
+
+        .cake2 {
+            margin-top: 20px; /* Tambahkan jarak vertikal antara video */
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .back-button, .second-button {
+            background-color: #0B4F6C; 
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none; /* Menghapus garis bawah pada tautan */
+            display: inline-block;
+            width: 150px; /* Lebar tombol */
+        }
+
+        .back-button:hover, .second-button:hover {
+            background-color: #0B4F6C; 
+        }
+
+        @media (max-width: 600px) {
+            /* Atur gaya untuk layar dengan lebar maksimum 600px */
+            .cake, .cake2 {
+                flex-basis: 100%; /* Setiap video akan menjadi 100% lebar kontainer */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="surprise-message">
+        <h1>Last Page! Terakhir temen mak iki</h1>
+        <p>Aku gawe iki simple mak soale pusing mari ujian hehe😂</p>
+        <p>YOK MARI KITA MULAI VIDEO DIBAWAH INI, LETSS GOOOOOO!!!!</p>
+        <div class="video-container">
+            <video class="cake" id="video1" muted controls>
+                <source src="HBDMAK1.mp4" type="video/mp4">
+                Maaf, browser Anda tidak mendukung elemen video.
+            </video>
+            <video class="cake2" id="video2" muted controls>
+                <source src="HBDMAK2.mp4" type="video/mp4">
+                Maaf, browser Anda tidak mendukung elemen video.
+            </video>
+        </div>
+        <div class="button-container">
+            <a href="kejutan.html" class="back-button">Kembali</a>
+            <a href="hbd.html" class="second-button">Finishhh🤠</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('video1').addEventListener('click', function() {
+            this.muted = !this.muted; // Mengubah status demute saat video diklik
+            if (this.paused) {
+                this.play(); // Memainkan video jika belum dimulai
+            } else {
+                this.pause(); // Memberhentikan video jika sedang diputar
+            }
+        });
+
+        document.getElementById('video2').addEventListener('click', function() {
+            this.muted = !this.muted; // Mengubah status demute saat video diklik
+            if (this.paused) {
+                this.play(); // Memainkan video jika belum dimulai
+            } else {
+                this.pause(); // Memberhentikan video jika sedang diputar
+            }
+        });
+    </script>
+</body>
+</html>
